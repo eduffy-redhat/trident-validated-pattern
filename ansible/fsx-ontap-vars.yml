@@ -10,12 +10,15 @@
 # route_table_ids: 
 #   - "rtb-0123456789abcdef0"
 
+# AWS Region
+aws_region: "us-west-1"
+
 # Option 2: Look up by name or tag (uncomment and use these instead)
-vpc_name: "ontap-vpc"  # VPC name to look up
+vpc_name: "vpcname-vpc"  # VPC name to look up
 # vpc_tag: "Name:my-vpc"  # Alternative: VPC tag key:value to look up (e.g., "Environment:prod")
-subnet_1_name: "ontap-private-us-west-1b"  # First subnet name to look up (must be in different AZ than subnet_2)
+subnet_1_name: "vpcname-private-us-west-1b"  # First subnet name to look up (must be in different AZ than subnet_2)
 # subnet_1_tag: "Name:ontap-private-us-west-1b"  # Alternative: First subnet tag key:value
-subnet_2_name: "ontap-private-us-west-1c"  # Second subnet name to look up (must be in different AZ than subnet_1)
+subnet_2_name: "vpcname-private-us-west-1c"  # Second subnet name to look up (must be in different AZ than subnet_1)
 # subnet_2_tag: "Name:ontap-private-us-west-1c"  # Alternative: Second subnet tag key:value
 route_table_names:
   - "main-route-table"  # List of route table names to look up
@@ -37,9 +40,6 @@ weekly_maintenance_time: "7:01:00"  # Format: d:HH:MM in UTC (d = day of week, 0
 svm_name: "SVM1"
 root_volume_security_style: "UNIX"  # UNIX, NTFS, or MIXED
 # svm_admin_password: null  # Password for vsadmin user (5-40 alphanumeric chars) - will be read from ~/.fsx
-
-# AWS Region
-aws_region: "us-west-1"
 
 # Tags
 tags:
