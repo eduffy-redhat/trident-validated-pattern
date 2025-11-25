@@ -3,3 +3,16 @@
 # You can add custom targets above or below the include line
 
 include Makefile-common
+
+REGION ?=
+CLUSTER ?=
+
+##@ FSx Tasks
+
+.PHONY: build-fsx
+build-fsx: ## Create FSx ONTAP filesystem (requires REGION and CLUSTER variables)
+	ansible-playbook ansible/site.yaml -e aws_region=$(REGION) -e cluster_name=$(CLUSTER) -e @ansible/fsx-ontap-vars.yml
+
+.PHONY: destroy-fsx
+destroy-fsx: ## Delete FSx ONTAP resources (requires REGION and CLUSTER variables)
+	ansible-playbook ansible/site.yaml -e aws_region=$(REGION) -e cluster_name=$(CLUSTER) -e @ansible/fsx-ontap-vars.yml -e delete_resources=true
