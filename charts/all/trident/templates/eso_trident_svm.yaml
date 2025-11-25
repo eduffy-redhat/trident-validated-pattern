@@ -1,7 +1,7 @@
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: eso-trident-iscsi-svm2
+  name: eso-trident-iscsi-svm
   namespace: trident
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
@@ -11,7 +11,7 @@ spec:
     kind: {{ .Values.secretStoreRef.kind }}
 {{- with .Values.tridentFSX }}
   target:
-    name: {{ .iscsi.secretName }}2
+    name: {{ .iscsi.secretName }}
     creationPolicy: Owner
   data:
     - secretKey: username
@@ -21,5 +21,5 @@ spec:
     - secretKey: password
       remoteRef:
         key: {{ .iscsi.key }}
-        content: true
+        property: content
 {{- end }}
