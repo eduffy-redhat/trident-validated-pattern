@@ -4,8 +4,8 @@
 
 include Makefile-common
 
-REGION ?=
-CLUSTER ?=
+REGION ?= eu-west-1
+CLUSTER ?= eduffy-trident-eu-b
 
 ##@ FSx Tasks
 
