@@ -16,8 +16,8 @@
 
     - name: Set subnet names from cluster_name
       set_fact:
-        subnet_1_name: "{{ cluster_name }}-private-{{ aws_region }}b"
-        subnet_2_name: "{{ cluster_name }}-private-{{ aws_region }}c"
+        subnet_1_name: "{{ cluster_name }}-subnet-private-{{ aws_region }}b"
+        subnet_2_name: "{{ cluster_name }}-subnet-private-{{ aws_region }}c"
       when: cluster_name is defined
 
     - name: Debug network configuration before role execution
