@@ -11,7 +11,7 @@
 #   - "rtb-0123456789abcdef0"
 
 # AWS Region
-aws_region: "us-west-1"
+aws_region: "eu-west-1"
 
 # Option 2: Look up by name or tag (uncomment and use these instead)
 # These will be auto-derived from cluster_name if not set
@@ -29,7 +29,7 @@ route_table_names:
 allowed_cidr: "10.0.0.0/16"  # CIDR range allowed to connect to FSx
 
 # FSx ONTAP Configuration
-file_system_name: "my-fsx-ontap"
+file_system_name: "eduffy-fsx-ontap-b"
 storage_capacity: 1024  # GiB (minimum 1024, maximum 196608 for SSD)
 throughput_capacity: 1024  # MBps (valid values: 512, 1024, 2048)
 storage_type: "SSD"  # SSD or HDD
@@ -38,7 +38,7 @@ weekly_maintenance_time: "7:01:00"  # Format: d:HH:MM in UTC (d = day of week, 0
 # fsx_admin_password: null # Password for fsxadmin user (5-40 alphanumeric chars) - will be read from ~/.fsx
 
 # Storage Virtual Machine (SVM) Configuration
-svm_name: "SVM1"
+svm_name: "SVM1-b"
 root_volume_security_style: "UNIX"  # UNIX, NTFS, or MIXED
 # svm_admin_password: null  # Password for vsadmin user (5-40 alphanumeric chars) - will be read from ~/.fsx
 
@@ -47,5 +47,5 @@ tags:
   Name: "OntapFileSystem_MAZ"
   Environment: "production"
   ManagedBy: "Ansible"
-  Project: "drvirt"
+  Project: "drvirt-eduffy"
 
