@@ -4,7 +4,7 @@
 
 # Network Configuration
 # Option 1: Provide direct IDs (uncomment and use these)
-# vpc_id: "vpc-0123456789abcdef0"
+vpc_id: "vpc-0219f7f0579cf6eb1"
 # subnet_1_id: "subnet-0123456789abcdef0"  # Primary subnet (must be in different AZ than subnet_2)
 # subnet_2_id: "subnet-0fedcba9876543210"  # Standby subnet (must be in different AZ than subnet_1)
 # route_table_ids: 
