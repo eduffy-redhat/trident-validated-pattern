@@ -4,7 +4,7 @@
 
 # Network Configuration
 # Option 1: Provide direct IDs (uncomment and use these)
-vpc_id: "vpc-0219f7f0579cf6eb1"
+vpc_id: "vpc-0c55fc91647b9e350"
 # subnet_1_id: "subnet-0123456789abcdef0"  # Primary subnet (must be in different AZ than subnet_2)
 # subnet_2_id: "subnet-0fedcba9876543210"  # Standby subnet (must be in different AZ than subnet_1)
 # route_table_ids: 
@@ -29,7 +29,7 @@ aws_region: "eu-west-1"
 allowed_cidr: "10.0.0.0/16"  # CIDR range allowed to connect to FSx
 
 # FSx ONTAP Configuration
-file_system_name: "eduffy-fsx-ontap-b"
+file_system_name: "eduffy-fsx-ontap-c"
 storage_capacity: 1024  # GiB (minimum 1024, maximum 196608 for SSD)
 throughput_capacity: 1024  # MBps (valid values: 512, 1024, 2048)
 storage_type: "SSD"  # SSD or HDD
@@ -38,7 +38,7 @@ weekly_maintenance_time: "7:01:00"  # Format: d:HH:MM in UTC (d = day of week, 0
 # fsx_admin_password: null # Password for fsxadmin user (5-40 alphanumeric chars) - will be read from ~/.fsx
 
 # Storage Virtual Machine (SVM) Configuration
-svm_name: "SVM1-b"
+svm_name: "SVM1-c"
 root_volume_security_style: "UNIX"  # UNIX, NTFS, or MIXED
 # svm_admin_password: null  # Password for vsadmin user (5-40 alphanumeric chars) - will be read from ~/.fsx
 
