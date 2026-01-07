@@ -1,10 +1,10 @@
 ---
 # Network Configuration
 # Option 1: Provide direct IDs
-vpc_id: "vpc-xxxxxxxxxxxxxxxxx"  # Replace with your VPC ID, or use vpc_name/vpc_tag below
-subnet_1_id: "subnet-xxxxxxxxxxxxxxxxx"  # Replace with first subnet ID, or use subnet_1_name/subnet_1_tag below
-subnet_2_id: "subnet-xxxxxxxxxxxxxxxxx"  # Replace with second subnet ID, or use subnet_2_name/subnet_2_tag below
-route_table_ids: ["rtb-xxxxxxxxxxxxxxxxx"]  # Replace with route table ID(s), or use route_table_names/route_table_tags below
+vpc_id: "vpc-029d94da52c00ea26"  # Replace with your VPC ID, or use vpc_name/vpc_tag below
+subnet_1_id: "subnet-0c00bdba633d7c7a9"  # Replace with first subnet ID, or use subnet_1_name/subnet_1_tag below
+subnet_2_id: "subnet-0112282b9069aed15"  # Replace with second subnet ID, or use subnet_2_name/subnet_2_tag below
+route_table_ids: ["rtb-0de78a73f2129c3e8", "rtb-0462ba8cea5a4e77c"]  # Replace with route table ID(s), or use route_table_names/route_table_tags below
 
 # Option 2: Provide names/tags to look up (if IDs not provided)
 vpc_name: ""  # VPC name to look up (e.g., "my-vpc")
