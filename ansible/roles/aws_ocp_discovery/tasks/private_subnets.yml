@@ -13,5 +13,5 @@
 
 - name: Truncate list of subnets if we have more than 2
   ansible.builtin.set_fact:
-    aws_vpc_private_subnet_ids: "{{ aws_vpc_private_subnet_ids[:2] }}"
+    aws_vpc_private_subnet_ids: "{{ aws_vpc_private_subnet_ids[-2:] }}"
   when: aws_vpc_private_subnet_ids | default([]) | length > 2
