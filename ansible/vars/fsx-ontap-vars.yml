@@ -9,7 +9,7 @@ file_system_name: "eduffy-fsx-ontap"
 storage_capacity: 1024  # GiB (minimum 1024, maximum 196608 for SSD)
 throughput_capacity: 1024  # MBps (valid values: 512, 1024, 2048)
 storage_type: "SSD"  # SSD or HDD
-deployment_type: "MULTI_AZ_1"  # MULTI_AZ_1 or SINGLE_AZ_1
+deployment_type: "SINGLE_AZ_1"  # MULTI_AZ_1 or SINGLE_AZ_1
 weekly_maintenance_time: "7:01:00"  # Format: d:HH:MM in UTC (d = day of week, 0-6, Sunday=0)
 # fsx_admin_password: null # Password for fsxadmin user (5-40 alphanumeric chars) - will be read from ~/.fsx
 
