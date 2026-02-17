@@ -233,7 +233,7 @@
       "DiskIopsConfiguration": {"Mode": "AUTOMATIC"}
     }' \
     --tags \
-      Key=Name,Value={{ file_system_name }} \
+      Key=Name,Value="{{ file_system_name }}-{{ lookup('community.general.random_string', length=8, upper=true, lower=true, special=false) }}" \
       Key=Environment,Value={{ fsx_resource_tags.Environment }} \
       Key=ManagedBy,Value={{ fsx_resource_tags.ManagedBy }} \
     --output json
@@ -309,7 +309,7 @@
     aws fsx create-storage-virtual-machine
     --region {{ ocp_aws_region }}
     --file-system-id {{ fsx_filesystem_id }}
-    --name {{ svm_name }}
+    --name "{{ svm_name }}-{{ lookup('community.general.random_string', length=8, upper=true, lower=true, special=false) }}"
     --root-volume-security-style {{ root_volume_security_style }}
     --svm-admin-password {{ svm_admin_password }}
     --output json
