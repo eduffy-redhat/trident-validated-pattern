@@ -2,7 +2,7 @@
 # VPC, subnets, and route-tables will be discovered from cluster configuration
 
 # Set CIDR to allow for route-table updates
-allowed_cidr: "10.0.0.0/16"  # CIDR range allowed to connect to FSx
+allowed_cidr: "10.2.0.0/15"  # CIDR range allowed to connect to FSx
 
 # FSx ONTAP Configuration
 file_system_name: "eduffy-fsx-ontap"
